@@ -2,7 +2,7 @@ package sorting.test;
 
 import org.junit.Assert;
 import org.junit.Test;
-import sorting.HeapSort;
+import sorting.heap.HeapSort;
 
 /**
  * 堆排序要求数组第 0 个元素不使用

@@ -2,6 +2,9 @@ package threesum;
 
 import java.util.Arrays;
 
+/**
+ * 使用双指针进行查找，时间复杂度为 O(N^2)。
+ */
 public class ThreeSumTwoPointer implements ThreeSum {
 
     @Override
@@ -11,7 +14,9 @@ public class ThreeSumTwoPointer implements ThreeSum {
         Arrays.sort(nums);
         for (int i = 0; i < N - 2; i++) {
             int l = i + 1, h = N - 1, target = -nums[i];
-            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
             while (l < h) {
                 int sum = nums[l] + nums[h];
                 if (sum == target) {

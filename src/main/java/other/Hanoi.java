@@ -1,3 +1,8 @@
+package other;
+
+/**
+ * 汉诺塔问题
+ */
 public class Hanoi {
 
     public static void move(int n, String from, String buffer, String to) {

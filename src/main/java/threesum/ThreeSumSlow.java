@@ -1,5 +1,8 @@
 package threesum;
 
+/**
+ * 时间复杂度：O(n^3)
+ */
 public class ThreeSumSlow implements ThreeSum {
     @Override
     public int count(int[] nums) {

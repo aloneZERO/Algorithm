@@ -1,4 +1,4 @@
-package sorting;
+package sorting.heap;
 
 public class Heap<T extends Comparable<T>> {
 
@@ -34,7 +34,6 @@ public class Heap<T extends Comparable<T>> {
 
 
     private void swim(int k) {
-
         while (k > 1 && less(k / 2, k)) {
             swap(k / 2, k);
             k = k / 2;

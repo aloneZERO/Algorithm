@@ -6,6 +6,8 @@ import threesum.ThreeSumSlow;
 
 /**
  * 倍率实验
+ * <p>
+ * 如果 T(N) ~ aN^blogN，那么 T(2N)/T(N) ~ 2^b。
  */
 public class RatioTest {
 

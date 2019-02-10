@@ -1,4 +1,4 @@
-package sorting;
+package sorting.quick;
 
 public class ThreeWayQuickSort<T extends Comparable<T>> extends QuickSort<T> {
 

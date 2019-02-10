@@ -1,33 +1,22 @@
 package queue;
 
-import queue.MyQueue;
-
 import java.util.Iterator;
 
 public class ListQueue<Item> implements MyQueue<Item> {
 
+    int N = 0;
     private Node first;
     private Node last;
-    int N = 0;
-
-
-    private class Node {
-        Item item;
-        Node next;
-    }
-
 
     @Override
     public boolean isEmpty() {
         return N == 0;
     }
 
-
     @Override
     public int size() {
         return N;
     }
-
 
     @Override
     public MyQueue<Item> add(Item item) {
@@ -48,7 +37,6 @@ public class ListQueue<Item> implements MyQueue<Item> {
         return this;
     }
 
-
     @Override
     public Item remove() throws Exception {
 
@@ -66,7 +54,6 @@ public class ListQueue<Item> implements MyQueue<Item> {
 
         return node.item;
     }
-
 
     @Override
     public Iterator<Item> iterator() {
@@ -89,5 +76,10 @@ public class ListQueue<Item> implements MyQueue<Item> {
                 return item;
             }
         };
+    }
+
+    private class Node {
+        Item item;
+        Node next;
     }
 }

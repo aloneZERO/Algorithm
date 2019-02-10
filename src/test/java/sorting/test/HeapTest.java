@@ -1,7 +1,7 @@
 package sorting.test;
 
 import org.junit.Assert;
-import sorting.Heap;
+import sorting.heap.Heap;
 
 public class HeapTest {
 

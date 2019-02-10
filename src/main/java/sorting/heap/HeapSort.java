@@ -1,4 +1,6 @@
-package sorting;
+package sorting.heap;
+
+import sorting.Sort;
 
 public class HeapSort<T extends Comparable<T>> extends Sort<T> {
 

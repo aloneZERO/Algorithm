@@ -1,4 +1,6 @@
-package sorting;
+package sorting.quick;
+
+import sorting.Sort;
 
 import java.util.Arrays;
 import java.util.Collections;

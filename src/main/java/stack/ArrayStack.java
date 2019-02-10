@@ -7,7 +7,7 @@ import java.util.Iterator;
  */
 public class ArrayStack<Item> implements MyStack<Item> {
 
-    // 栈元素数组，只能通过转型来创建泛型数组
+    // 栈元素数组，只能通过强转来创建泛型数组
     private Item[] a = (Item[]) new Object[1];
 
     // 元素数量
@@ -58,9 +58,7 @@ public class ArrayStack<Item> implements MyStack<Item> {
 
         Item[] tmp = (Item[]) new Object[size];
 
-        for (int i = 0; i < N; i++) {
-            tmp[i] = a[i];
-        }
+        System.arraycopy(a, 0, tmp, 0, N);
 
         a = tmp;
     }

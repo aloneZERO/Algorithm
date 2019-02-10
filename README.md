@@ -56,7 +56,7 @@
 | ---- BinarySearch                  // 二分查找
 | ---- RatioTest                     // 倍率实验
 | ---- StopWatch                     // 计时器
-| ---- ThreeSumBinarySearch                  // 改进的 ThreeSum
+| ---- ThreeSumBinarySearch          // 改进的 ThreeSum
 | ---- ThreeSumSlow                  // 未改进的 ThreeSum
 | Union-Find
 | ---- QuickFindUF                   // 快速查找并查集

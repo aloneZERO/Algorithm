@@ -1,11 +1,17 @@
 package sorting.test;
 
-import org.junit.Assert;
+import org.junit.Test;
 import sorting.*;
+import sorting.merging.Down2UpMergeSort;
+import sorting.merging.Up2DownMergeSort;
+import sorting.quick.QuickSort;
+import sorting.quick.ThreeWayQuickSort;
 
-public class Test {
+import static org.junit.Assert.assertArrayEquals;
 
-    private Integer[][] numsBefore = {
+public class SortTest {
+
+    private static final Integer[][] NUMS_BEFORE = {
             {1, 2, 3},
             {3, 2, 1},
             {1},
@@ -13,7 +19,7 @@ public class Test {
             {Integer.MAX_VALUE, Integer.MIN_VALUE}
     };
 
-    private Integer[][] numsAfter = {
+    private static final Integer[][] NUMS_AFTER = {
             {1, 2, 3},
             {1, 2, 3},
             {1},
@@ -22,59 +28,57 @@ public class Test {
     };
 
 
-    @org.junit.Test
+    @Test
     public void SelectionTest() {
         test(new Selection<>());
     }
 
 
-    @org.junit.Test
+    @Test
     public void BubbleTest() {
         test(new Bubble<>());
     }
 
 
-    @org.junit.Test
+    @Test
     public void InsertionTest() {
         test(new Insertion<>());
     }
 
 
-    @org.junit.Test
+    @Test
     public void ShellTest() {
         test(new Shell<>());
     }
 
-
-    @org.junit.Test
+    @Test
     public void Up2DownMergeSortTest() {
         test(new Up2DownMergeSort<>());
     }
 
 
-    @org.junit.Test
+    @Test
     public void Down2UpMergeSortTest() {
         test(new Down2UpMergeSort<>());
     }
 
 
-    @org.junit.Test
+    @Test
     public void QuickSortTest() {
         test(new QuickSort<>());
     }
 
 
-    @org.junit.Test
+    @Test
     public void ThreeWayQuickSortTest() {
         test(new ThreeWayQuickSort<>());
     }
 
 
     private void test(Sort<Integer> sort) {
-
-        for (int i = 0; i < numsBefore.length; i++) {
-            sort.sort(numsBefore[i]);
-            Assert.assertArrayEquals(numsBefore[i], numsAfter[i]);
+        for (int i = 0; i < NUMS_BEFORE.length; i++) {
+            sort.sort(NUMS_BEFORE[i]);
+            assertArrayEquals(NUMS_BEFORE[i], NUMS_AFTER[i]);
         }
     }
 }
