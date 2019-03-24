@@ -7,6 +7,8 @@ import sorting.merging.Up2DownMergeSort;
 import sorting.quick.QuickSort;
 import sorting.quick.ThreeWayQuickSort;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.assertArrayEquals;
 
 public class SortTest {
@@ -33,18 +35,15 @@ public class SortTest {
         test(new Selection<>());
     }
 
-
     @Test
     public void BubbleTest() {
         test(new Bubble<>());
     }
 
-
     @Test
     public void InsertionTest() {
         test(new Insertion<>());
     }
-
 
     @Test
     public void ShellTest() {
@@ -56,29 +55,27 @@ public class SortTest {
         test(new Up2DownMergeSort<>());
     }
 
-
     @Test
     public void Down2UpMergeSortTest() {
         test(new Down2UpMergeSort<>());
     }
-
 
     @Test
     public void QuickSortTest() {
         test(new QuickSort<>());
     }
 
-
     @Test
     public void ThreeWayQuickSortTest() {
         test(new ThreeWayQuickSort<>());
     }
 
-
     private void test(Sort<Integer> sort) {
         for (int i = 0; i < NUMS_BEFORE.length; i++) {
-            sort.sort(NUMS_BEFORE[i]);
-            assertArrayEquals(NUMS_BEFORE[i], NUMS_AFTER[i]);
+            Integer[] nums = Arrays.copyOf(NUMS_BEFORE[i], NUMS_BEFORE[i].length);
+
+            sort.sort(nums);
+            assertArrayEquals(nums, NUMS_AFTER[i]);
         }
     }
 }

@@ -5,7 +5,8 @@ package sorting;
  * <p>
  * 在一轮循环中，如果没有发生交换，就说明数组已经是有序的，此时可以直接退出。
  */
-public class Bubble<T extends Comparable<T>> extends Sort<T> {
+public class Bubble<T extends Comparable<T>>
+        extends Sort<T> {
 
     @Override
     public void sort(T[] nums) {

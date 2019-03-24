@@ -1,9 +1,10 @@
 package sorting.merging;
 
 /**
- *
+ * 先归并那些微型数组，然后成对归并得到的微型数组。
  */
-public class Down2UpMergeSort<T extends Comparable<T>> extends MergeSort<T> {
+public class Down2UpMergeSort<T extends Comparable<T>>
+        extends MergeSort<T> {
 
     @Override
     public void sort(T[] nums) {

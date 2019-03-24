@@ -1,13 +1,15 @@
 package sorting.test;
 
-import org.junit.Assert;
+import org.junit.Test;
 import sorting.heap.Heap;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class HeapTest {
 
-    @org.junit.Test
+    @Test
     public void test() {
-
         Heap<Integer> heap = new Heap<>(10);
 
         heap.insert(5);
@@ -15,13 +17,13 @@ public class HeapTest {
         heap.insert(6);
         heap.insert(1);
 
-        Assert.assertEquals(heap.size(), 4);
+        assertEquals(heap.size(), 4);
 
-        Assert.assertEquals(6, (int) heap.delMax());
-        Assert.assertEquals(5, (int) heap.delMax());
-        Assert.assertEquals(4, (int) heap.delMax());
-        Assert.assertEquals(1, (int) heap.delMax());
+        assertEquals(6, (int) heap.delMax());
+        assertEquals(5, (int) heap.delMax());
+        assertEquals(4, (int) heap.delMax());
+        assertEquals(1, (int) heap.delMax());
 
-        Assert.assertTrue(heap.isEmpty());
+        assertTrue(heap.isEmpty());
     }
 }

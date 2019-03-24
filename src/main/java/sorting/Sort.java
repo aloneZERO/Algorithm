@@ -20,7 +20,13 @@ public abstract class Sort<T extends Comparable<T>> {
         return v.compareTo(w) < 0;
     }
 
-    // 数组中交换两个元素位置
+    /**
+     * 数组中交换两个元素位置
+     *
+     * @param a 目标数组
+     * @param i 元素1的数组下标
+     * @param j 元素2的数组下标
+     */
     protected void swap(T[] a, int i, int j) {
         T t = a[i];
         a[i] = a[j];

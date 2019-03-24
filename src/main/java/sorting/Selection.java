@@ -7,7 +7,8 @@ package sorting;
  * <p>
  * 运行时间与输入无关
  */
-public class Selection<T extends Comparable<T>> extends Sort<T> {
+public class Selection<T extends Comparable<T>>
+        extends Sort<T> {
 
     @Override
     public void sort(T[] nums) {

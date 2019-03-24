@@ -1,4 +1,4 @@
-package threesum;
+package utils;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -27,4 +27,6 @@ public class StopWatch {
         return Duration.between(start, now)
                 .toMillis() / 1000.0;
     }
+
+    private StopWatch() {}
 }

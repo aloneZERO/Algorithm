@@ -2,12 +2,12 @@ package sorting.merging;
 
 import sorting.Sort;
 
+import java.util.Arrays;
+
 /**
  * 二路归并排序的思想是将数组分成两部分，分别进行排序，然后归并起来。
  */
-public abstract class MergeSort<T extends Comparable<T>> extends Sort<T> {
-
-    protected T[] aux; // 辅助数组
+abstract class MergeSort<T extends Comparable<T>> extends Sort<T> {
 
     /**
      * 将数组中两个已经排序的部分归并成一个。
@@ -17,11 +17,15 @@ public abstract class MergeSort<T extends Comparable<T>> extends Sort<T> {
      * @param m 第一部分终点；m+1 为第二部分起点
      * @param h 第二部分终点
      */
-    protected void merge(T[] nums, int l, int m, int h) {
-        aux = (T[]) new Comparable[nums.length];
+    void merge(T[] nums, int l, int m, int h) {
+        // 辅助数组
+        @SuppressWarnings("unchecked")
+        T[] aux = (T[]) new Comparable[nums.length];
 
         int i = l, j = m + 1;
-        System.arraycopy(nums, l, aux, l, h + 1 - l); // 将数据复制到辅助数组
+
+        // 将原数组下标从 l~h 的元素复制到辅助数组对应的位置中
+        System.arraycopy(nums, l, aux, l, h + 1 - l);
 
         for (int k = l; k <= h; k++) {
             if (i > m) {
