@@ -66,4 +66,4 @@
 
 ```
 
-Created my free logo at LogoMakr.com @logomakr
+Created my free logo at [LogoMakr](https://logoMakr.com).
